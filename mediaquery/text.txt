@@ -1,0 +1,72 @@
+medio query 미디어 쿼리
+
+  - 반응형 웹 (Responsive Web)
+  - 사용자가 접속한 디바이스의 사이즈에 반응하는 웹을 말합니다.
+  - 사이트 예시
+      1. RWDB (http://rwdb.kr/)
+      2. Media Queries (https://mediaqueri.es/)
+
+  - 구현하는 방식
+
+    1. <html> viewport 설정 후 css에 미디어쿼리 사용
+        - 사용예시
+          @media only screen and (min-width: 400px) {}
+            가로폭이 0~400px 인경우 보이도록 설정
+
+    2. responsive (라이브러리)     
+        - npm i react-responsive
+        - npm i @types/react-responsive
+
+        useMediaQuery라는 hook을 제공합니다
+        이 hook안에 조건을 넣어주면 해당 조건에 따라 true, false를 반환합니다.
+
+    3. bootstrap
+
+
+
+
+  ◼ only | not
+    - only: 뒤의 조건에서만
+    - not: 뒤의 조건을 제외한
+
+  ◼ 미디어 타입
+    - screen: 컴퓨터 스크린
+    - all, aural, braille 등 등
+  
+  ◼ 속성
+    - width, height: 웹페이지의 가로,세로 길이
+    - device-width, device-height: 단말기의 가로, 세로 길이
+    - aspect-rato: width / height 비율
+    - 등등
+
+
+
+  ⭐bootstrap -  https://react-bootstrap.github.io/
+
+      - 사용법
+
+        npm i react-bootstrap bootstrap
+
+      - import (2가지 방식 중 편한걸로)
+       
+        1. import Button from 'react-bootstrap/Button';
+        2. import { Button } from 'react-bootstrap';
+
+
+
+*/
+
+
+
+React 반응형 responsive (useMediaQuery)
+
+  - 설치하기
+      npm i react-responsive
+      npm i @types/react-responsive
+
+  - 참고 사이트
+      https://velog.io/@st2702/%EB%B0%98%EC%9D%91%ED%98%95-%EC%9B%B9-Media-Query
+
+
+styles.type 주기
+  - https://blog.naver.com/psj9102/222492939754
