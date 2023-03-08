@@ -9,10 +9,8 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.3.4",
     "react": "^18.2.0",
-    "react-cookie": "^4.1.1",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
-    "react-responsive": "^9.0.2",
     "react-router-dom": "^6.8.2",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.8",
@@ -25,13 +23,20 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --cache",
-    "format": "prettier --cache --write"
+    "format": "prettier --cache --write",
+    "server": "json-server-auth --watch db.json --port 4000"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "semi": [
+        "error",
+        "always"
+      ]
+    }
   },
   "browserslist": {
     "production": [
@@ -49,8 +54,9 @@
     "eslint": "^8.35.0",
     "eslint-config-prettier": "^8.7.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.32.2",
     "husky": "^8.0.3",
+    "json-server-auth": "^2.1.0",
     "prettier": "^2.8.4"
-  }
+  },
+  "proxy": "http://localhost:4000"
 }

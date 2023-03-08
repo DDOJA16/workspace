@@ -1,4 +1,5 @@
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const LoginForm = () => {
   const getUsers = async () => {
@@ -8,12 +9,15 @@ const LoginForm = () => {
   getUsers();
   return (
     <div>
-      <div>
-        <input type="email" placeholder="이메일을 입력하세요" value="email" />
-        <input type="password" placeholder="비밀번호를 입력하세요" value="password" />
+      <form>
+        <input type="email" placeholder="이메일을 입력하세요" defaultValue="email" />
+        <input type="password" placeholder="비밀번호를 입력하세요" defaultValue="password" />
         <button>로그인</button>
-      </div>
+      </form>
       <button>테스트</button>
+      <Link to="/signup">
+        <p>회원가입</p>
+      </Link>
     </div>
   );
 };
