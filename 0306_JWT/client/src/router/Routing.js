@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from "react";
 import LoginForm from "pages/loginForm";
 import Register from "pages/signUpForm";
+import Todo from "pages/todo/components/todo";
 // import { Path } from "react-router-dom";
 
 const Routing = () => {
@@ -12,7 +13,8 @@ const Routing = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<LoginForm />} />
+        <Route path="/" element={<Todo />} />
+        <Route path="/login" element={<LoginForm />} />
         <Route path="/signup" element={<Register />} />
       </Routes>
     </BrowserRouter>

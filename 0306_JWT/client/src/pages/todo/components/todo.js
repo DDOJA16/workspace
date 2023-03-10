@@ -1,12 +1,14 @@
+import { Axios } from "apis/@core";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Todo = () => {
   const [description, setDescription] = useState("");
   const [todoList, setTodoList] = useState([]);
 
   const readList = async () => {
-    const { data } = await axios.get("http://localhost:4000/todos");
+    const { data } = await Axios.get("/todos");
     setTodoList(data);
   };
 
@@ -15,7 +17,7 @@ const Todo = () => {
   }, []);
 
   const handleSubmit = async () => {
-    const { data } = await axios.post("http://localhost:4000/todos", {
+    const { data } = await Axios.post("/todos", {
       description,
       isCompleted: false,
     });
@@ -25,18 +27,20 @@ const Todo = () => {
   };
 
   const toggleCompleteBtn = async (id, isCompleted) => {
-    await axios.patch(`http://localhost:4000/todos/${id}`, {
+    await Axios.patch(`/todos/${id}`, {
       isCompleted: !isCompleted,
     });
     await readList();
   };
   const deleteTodoBtn = async (id) => {
-    await axios.delete(`http://localhost:4000/todos/${id}`);
+    await Axios.delete(`/todos/${id}`);
     await readList();
   };
   return (
     <>
-      <h1>1분만에 Rest api 만들기</h1>
+      <Link to={"/login"}>로그인</Link>
+      <Link to={"/signup"}>회원가입</Link>
+
       <div>
         <h2>추가하기</h2>
         <input

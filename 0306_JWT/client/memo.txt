@@ -1,0 +1,21 @@
+🍦 회원가입 절차
+    1. 회원가입 요청
+    2. 정보, 인증토큰을 store 및 localStorage에 저장
+        (store - 새로고침시 인증정보 날라감)
+    3. 메인페이지로 이동
+
+    @utils/auth.js -- "user","token"을 담을 localStorage 생성
+    @redux/reducer.js -- 담은 localStorage 가져와서 user, token정보를 담을 reducer(전역 상태값)생성
+    @commonActions.js -- dispatch로 action 생성
+                         login 하면 localStorage에 user,token값 저장
+                         logout 하면 localStorage에 있는 user,token값 삭제
+    @Register.jsx -- 
+
+
+    @AuthRoute.jsx -- url 직접 접근 제한 설정
+                      (로그인 여부에 따른 제한 접근 라우팅)
+                      (private route)
+
+
+    @interceptors.js -- axios 요청시 인증토큰 받아서 보내기
+                        토큰 만료되면 로그아웃시키키 <-?
