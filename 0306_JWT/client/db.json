@@ -1,27 +1,54 @@
 {
-  "user": [
+  "users": [
+    {
+      "email": "skqsk3@naver.com",
+      "password": "$2a$10$Onan6B9P..xrHlCV.isk1OKBw3RZqkF5ZZBD0r9ArT7Vb9JBIicSW",
+      "id": 1
+    },
+    {
+      "email": "test@naver.com",
+      "password": "$2a$10$ac8Ps6ZC4IOOhsl4XjTWn.QAAM3jJBEuLRtjM2NKnvM6.y4cG/1iu",
+      "id": 2
+    },
+    {
+      "email": "test1234@test.com",
+      "password": "$2a$10$8ehNYyZUSUOVbIlNR1GkvOOeHtWevLaMgkRYev8ui4WpM1mk4HTua",
+      "id": 3
+    }
+  ],
+  "todos": [
     {
       "id": 1,
-      "username": "testuser1",
-      "email": "testuser1@gmail.com",
-      "password": "1111"
+      "contents": "json-server 공부하기",
+      "isCompleted": false
     },
     {
       "id": 2,
-      "username": "testuser2",
-      "email": "testuser2@gmail.com",
-      "password": "2222"
+      "contents": "점심 메뉴 생각하기",
+      "isCompleted": true
     },
     {
-      "id": 3,
-      "username": "testuser3",
-      "email": "testuser3@gmail.com",
-      "password": "3333"
-    },
-    {
-      "text": "todo3",
-      "done": true,
+      "description": "안녕하세요?",
+      "isCompleted": false,
       "id": 4
+    },
+    {
+      "description": "배고파요",
+      "isCompleted": false,
+      "id": 6
+    },
+    {
+      "description": "ㅎㅅㅎ",
+      "isCompleted": false,
+      "id": 7
+    },
+    {
+      "description": "ㅇㅇㅇ",
+      "isCompleted": false,
+      "id": 8
+    },
+    {
+      "id": 9
     }
   ]
 }

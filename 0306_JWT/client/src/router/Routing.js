@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from "react";
 import LoginForm from "pages/loginForm";
-import SignUpForm from "pages/signUpForm";
+import Register from "pages/signUpForm";
 // import { Path } from "react-router-dom";
 
 const Routing = () => {
@@ -13,7 +13,7 @@ const Routing = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LoginForm />} />
-        <Route path="/register" element={<SignUpForm />} />
+        <Route path="/signup" element={<Register />} />
       </Routes>
     </BrowserRouter>
   );
