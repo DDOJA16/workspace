@@ -49,6 +49,11 @@
       "email": "test000@000",
       "password": "$2a$10$w42YwmFIy031W4jncsA/ZOli/FZA7OprVDBS5hXlLpqraqwMHTL3y",
       "id": 10
+    },
+    {
+      "email": "skqsk3@naver",
+      "password": "$2a$10$byzWax2djbDkjb.ygudAieWb7ayJyBK0TyOlo18vqe1JNxMhNWmDS",
+      "id": 11
     }
   ],
   "todos": [
