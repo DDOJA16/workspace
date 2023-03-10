@@ -2,15 +2,18 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import { Axios } from "apis/@core";
+import { useDispatch, useSelector } from "react-redux";
+import { signUpAsync } from "reducer/user";
 
 function Register() {
+  const userInfo = useSelector((state) => state);
+  const dispatch = useDispatch();
   const [cookies, setCookies, removeCookies] = useCookies();
-  const [inputValue, setInputValue] = useState({
-    email: "",
-    password: "",
-  });
+  const [inputValue, setInputValue] = useState("");
+  console.log(userInfo.reducer);
 
   const navigate = useNavigate();
+
   const inputChangeHandler = (e) => {
     const { name, value } = e.target;
     setInputValue({
@@ -19,17 +22,10 @@ function Register() {
     });
   };
 
-  const doSignUp = async () => {
-    try {
-      const { data } = await Axios.post("/register", inputValue);
-      console.log(data);
-      // 쿠키추가 (path:"/" -> 전체 웹사이트에서 사용가능)
-      setCookies("accessToken", data["accessToken"], { path: "/" });
-      // 회원가입 성공시 메인페이지 이동
-      navigate("/login");
-    } catch (error) {
-      console.log(error);
-    }
+  const doSignUp = (e) => {
+    dispatch(signUpAsync(inputValue));
+
+    console.log(userInfo);
   };
 
   return (

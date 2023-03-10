@@ -1,41 +1,55 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice, isRejectedWithValue } from "@reduxjs/toolkit";
 import { Axios } from "apis/@core";
 
 const initialState = {
-  isLoggedIn: false,
-  userData: null,
+  email: "",
+  password: "",
+  isLogin: false,
 };
 
-// userSlice
+// createSlice()는 useState()와 용도 비슷
 export const userSlice = createSlice({
+  // slice 이름
   name: "user",
   initialState,
-  reducers: {
-    loginAction(state, action) {
-      state.isLoggedIn = true;
-      state.userData = action.payload;
-    },
-    logoutAction(state, action) {
-      state.isLoggedIn = false;
-      state.userData = null;
-    },
+  reducers: {},
+  extraReducers: (builder) => {
+    builder.addCase(signUpAsync.pending, (state) => {
+      state.isLogin = false;
+    });
+    builder.addCase(signUpAsync.fulfilled, (state, action) => {
+      alert("회원가입에 성공하셨습니다");
+      state.isLogin = true;
+      return { state, email: action.payload.email };
+    });
+    builder.addCase(signUpAsync.rejected, (state, action) => {
+      state.isLogin = false;
+    });
   },
 });
-const { reducer, actions } = userSlice;
-export const { loginAction, logoutAction } = actions;
-export default reducer;
 
-export const join = createAsyncThunk("user/join", async (data) => {
-  const response = await Axios.post("/register", {
-    email: data.email,
-    password: data.password,
-  });
-  return response.data;
+export const signUpAsync = createAsyncThunk("user/register", async (data) => {
+  try {
+    const response = await Axios.post("/register", {
+      email: data.email,
+      password: data.password,
+    });
+    return response.data;
+  } catch (error) {
+    return isRejectedWithValue(error.reponse.data);
+  }
 });
 
+// Slice 내보냄
+export default userSlice.reducer;
+//
+export const getUserInfo = (state) => state;
+
 /*
+  https://github.com/light9639/Redux-Toolkit-Axios-AsyncThunk
   https://m.blog.naver.com/dlaxodud2388/222625208050
   https://zaraza.tistory.com/113
+  https://steadily-worked.tistory.com/864
 
 createSlice - redux에서 reducer와 action을 합쳐놓은 것
               현재 slice의 state값에 값들이 변경되게 할 로직들
