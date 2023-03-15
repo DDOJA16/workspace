@@ -18,8 +18,8 @@ export const userSlice = createSlice({
       state.isLogin = false;
     });
     builder.addCase(signUpAsync.fulfilled, (state, action) => {
-      alert("회원가입에 성공하셨습니다");
       state.isLogin = true;
+      alert("회원가입에 성공하셨습니다");
       return { state, email: action.payload.email };
     });
     builder.addCase(signUpAsync.rejected, (state, action) => {
@@ -34,6 +34,7 @@ export const signUpAsync = createAsyncThunk("user/register", async (data) => {
       email: data.email,
       password: data.password,
     });
+    console.log(response.data);
     return response.data;
   } catch (error) {
     return isRejectedWithValue(error.reponse.data);

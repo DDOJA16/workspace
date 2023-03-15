@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
-import { Axios } from "apis/@core";
 import { useDispatch, useSelector } from "react-redux";
 import { signUpAsync } from "reducer/user";
 
 function Register() {
-  const userInfo = useSelector((state) => state);
   const dispatch = useDispatch();
+  const userInfo = useSelector((state) => state);
   const [cookies, setCookies, removeCookies] = useCookies();
-  const [inputValue, setInputValue] = useState("");
-  console.log(userInfo.reducer);
+  const [inputValue, setInputValue] = useState({});
+  console.log(userInfo);
 
   const navigate = useNavigate();
 
@@ -22,9 +21,9 @@ function Register() {
     });
   };
 
-  const doSignUp = (e) => {
-    dispatch(signUpAsync(inputValue));
-
+  const doSignUp = async (e) => {
+    await dispatch(userInfo(inputValue));
+    navigate("/");
     console.log(userInfo);
   };
 
