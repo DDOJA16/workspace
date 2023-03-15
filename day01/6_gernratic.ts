@@ -79,3 +79,4 @@ multiGeneric("string", 123);
 // 관용적으로는 T 다음으로 알파벳은 순서대로 사용
 
 // 4. 상속 이용하기(extends)
+// (extends를 이용한 타입제한)
