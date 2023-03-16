@@ -9,156 +9,27 @@
       "email": "test@naver.com",
       "password": "$2a$10$ac8Ps6ZC4IOOhsl4XjTWn.QAAM3jJBEuLRtjM2NKnvM6.y4cG/1iu",
       "id": 2
-    },
-    {
-      "email": "test1234@test.com",
-      "password": "$2a$10$8ehNYyZUSUOVbIlNR1GkvOOeHtWevLaMgkRYev8ui4WpM1mk4HTua",
-      "id": 3
-    },
-    {
-      "email": "123@111",
-      "password": "$2a$10$19dv74u2vC6ARK4/vtoo/.SiZXuVUb6KsrwQrAJv0GWtFwBuqJhrW",
-      "id": 4
-    },
-    {
-      "email": "1234@1234",
-      "password": "$2a$10$x6mx2w36ZUcvYf74uokH4e8B7Eqz7kvFu8g9kWt9pek7eYqcKYCuq",
-      "id": 5
-    },
-    {
-      "email": "12345@12345",
-      "password": "$2a$10$P59E8TNGojZDEC5r5AqgIOSsrTQtKQatDSiA0J5EUx/bA.GoOlxGu",
-      "id": 6
-    },
-    {
-      "email": "123444@12344",
-      "password": "$2a$10$WmLw739K3Nrb/lFAlCRqCOxNdESqRokbLUarm8UOs7pJ6cdq6KYnW",
-      "id": 7
-    },
-    {
-      "email": "ddd@dddd",
-      "password": "$2a$10$13FiFGVyMTLQON8txgS3Vup5/L/nZTV/pUo58ndam4eZBA2f/YeE.",
-      "id": 8
-    },
-    {
-      "email": "111@111",
-      "password": "$2a$10$pa/WlJQUALbvOP8ht0AXhenHc7YCBHjd9LZlzUUqQsykIfoQgEhTC",
-      "id": 9
-    },
-    {
-      "email": "test000@000",
-      "password": "$2a$10$w42YwmFIy031W4jncsA/ZOli/FZA7OprVDBS5hXlLpqraqwMHTL3y",
-      "id": 10
-    },
-    {
-      "email": "skqsk3@naver",
-      "password": "$2a$10$byzWax2djbDkjb.ygudAieWb7ayJyBK0TyOlo18vqe1JNxMhNWmDS",
-      "id": 11
-    },
-    {
-      "email": "skqsk3@naver.com11",
-      "password": "$2a$10$vhM/xA0iUb2iNO90Dvb5/ObBcTmlYMjGa10W6oL9Xa3mXVdDFk5EG",
-      "id": 12
-    },
-    {
-      "email": "skqsk3@naver.com111",
-      "password": "$2a$10$eSUfJyrLo2e0SocCVlwLHuOOIIWt4M4H3nTC5YpGCfHJP0lfdQlaa",
-      "id": 13
-    },
-    {
-      "email": "skqsk3@naver.com44",
-      "password": "$2a$10$kGtQN3Cat2Jf8tfvf71qGelXz8Voa.Xzt8jPc.FkhHcqBV7NvkCoC",
-      "id": 14
-    },
-    {
-      "email": "skqsk3@naver.com1111",
-      "password": "$2a$10$0LAm3yyk3yKUrXFgpdXkR.rvtXYB/offx3I5Z2oJwpUf/eJgSB8Ry",
-      "id": 15
-    },
-    {
-      "email": "12311@111",
-      "password": "$2a$10$wm38BQkPuBXn8KB19t.BzObCrfA8Nn3cIRKrnkMprgJnGtovQJ5aS",
-      "id": 16
-    },
-    {
-      "email": "123@111111",
-      "password": "$2a$10$u0wu5E8Bzq6H0ZopHxeodOLaOqwSzpRgmPCZJvQC3j/v/ZHpYIg8q",
-      "id": 17
-    },
-    {
-      "email": "123@111111111333",
-      "password": "$2a$10$Le1W5aBDO9ejibzWAhVwZeaN8XOu.HU9OSzZYSsSmfQaJFNm0xXmi",
-      "id": 18
-    },
-    {
-      "email": "123@1313131",
-      "password": "$2a$10$B6dMBGo7JJ9ANykrjVdUpu3IJloa9.RvMBGuYoBSBaBkDKAG8Dkwu",
-      "id": 19
-    },
-    {
-      "email": "123@11111112234234",
-      "password": "$2a$10$.1hKP4KxvimEICcDzwUiyeS3WmzwXZI.szZ0GWDU2C4oicIYh6hnC",
-      "id": 20
-    },
-    {
-      "email": "123@23123124",
-      "password": "$2a$10$pbHjh5gsgAqEXcHwR2IEOOujM/1G1PXkg/yFav6tXbbWGpTzTGmxW",
-      "id": 21
-    },
-    {
-      "email": "awefasc@sdfef",
-      "password": "$2a$10$swfEMVsJsDsA9JKmtQmWKuBJUrV55m/syP2wF.uO2NRAtgKMtmtzi",
-      "id": 22
-    },
-    {
-      "email": "awefasv@sef",
-      "password": "$2a$10$z1SxLgrvWu9PYFn.fZizruVXi40SJgw5JzRv4R7uVUIOG2o/hAsJi",
-      "id": 23
-    },
-    {
-      "email": "123123asdf@sdfaef",
-      "password": "$2a$10$CN3.ilEE84UgUMdq/YUTuOwR3wNt71WuCaEIQhxk0o/0JCG/IadKS",
-      "id": 24
-    },
-    {
-      "email": "awefasdf@ef",
-      "password": "$2a$10$/lzCAxS44g3blesN.CI/.e8c6s3xsCYmwXDFZrOgMbeClDCXJj9ee",
-      "id": 25
     }
   ],
   "todos": [
     {
-      "id": 1,
-      "contents": "json-server 공부하기",
-      "isCompleted": false
-    },
-    {
-      "id": 2,
-      "contents": "점심 메뉴 생각하기",
-      "isCompleted": true
-    },
-    {
-      "description": "안녕하세요?",
-      "isCompleted": false,
-      "id": 4
-    },
-    {
-      "description": "배고파요",
-      "isCompleted": false,
-      "id": 6
-    },
-    {
       "description": "ㅎㅅㅎ",
-      "isCompleted": false,
+      "isCompleted": true,
       "id": 7
     },
     {
-      "id": 9
+      "id": 9,
+      "isCompleted": true
     },
     {
       "description": "ttt",
       "isCompleted": false,
       "id": 10
+    },
+    {
+      "description": "안녕하세요",
+      "isCompleted": false,
+      "id": 11
     }
   ]
 }

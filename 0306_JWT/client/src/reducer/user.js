@@ -12,8 +12,14 @@ export const userSlice = createSlice({
   // slice 이름
   name: "user",
   initialState,
-  reducers: {},
+  reducers: {
+    // 액션 타입은 슬라이스 이름을 접두어로 사용해서 자동 생성됩니다 -> 'user/액션이름'
+    // 이에 상응하는 액션 타입을 가진 액션이 디스패치 되면 리듀서가 실행됩니다.
+  },
+
   extraReducers: (builder) => {
+    // crateSlice가 생성한 액션타입 외 다른 액션 타입에 응답할 수 있도록 합니다.
+    // 외부의 액션을 찹조하려는 의도를 가지고 있습니다. (createAsyncThunk)
     builder.addCase(signUpAsync.pending, (state) => {
       state.isLogin = false;
     });
